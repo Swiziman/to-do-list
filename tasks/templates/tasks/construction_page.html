@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block title %}Página em Construção{% endblock %}
+   
+{% block content %}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .container img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        p {
+            font-size: 18px;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Animação de loader */
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 2s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    </head>
+    <body>
+    <div class="container">
+        <h1>Página em Construção</h1>
+        <img src="" alt="Muro em construção">
+        <p>Estamos trabalhando para trazer algo incrível. Disponível em breve!</p>
+        <div class="loader"></div>
+    </div>
+
+    <script>
+        // Exemplo de interação JavaScript (trocar texto após 3 segundos)
+        setTimeout(function() {
+            document.querySelector('p').innerText = "Aguarde um pouco mais, estamos quase prontos!";
+        }, 3000);
+    </script>
+    </body>
+{% endblock %}
+
